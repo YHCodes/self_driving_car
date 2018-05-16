@@ -23,11 +23,15 @@ My pipeline consisted of 5 steps.
 
 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by averaging
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by averaging and extrapolating lines.
 
 
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
+
+![solidWhiteCurve.jpg](https://github.com/YHCodes/self_driving_car/blob/master/projects/CarND-LaneLines-P1-master/test_images_output/solidWhiteCurve.jpg?raw=true)
+
+![solidYellowCurve.jpg](https://github.com/YHCodes/self_driving_car/blob/master/projects/CarND-LaneLines-P1-master/test_images_output/solidYellowCurve.jpg?raw=true)
 
 
 
@@ -35,13 +39,13 @@ If you'd like to include images to show how the pipeline works, here is how to i
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+One potential shortcoming would be what would happen when the car driving at night, the background is really dark, will have a bad influence.
 
-Another shortcoming could be ...
+Another shortcoming could be when the road have shadow of building or tree, it may cause the detecting road lane lines distortion.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be to improve code robustness by eliminating background nose.
 
-Another potential improvement could be to ...
+Another potential improvement could be to filter more unrelated objects.s
