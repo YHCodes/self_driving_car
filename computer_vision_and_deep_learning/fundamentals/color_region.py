@@ -50,10 +50,10 @@ color_select[color_thresholds | ~region_thresholds] = [0, 0, 0]
 line_image[~color_thresholds & region_thresholds] = [255, 0, 0]
 
 # Display the image and show region and color selections
-plt.imshow(image)
+#plt.imshow(image)
 x = [left_bottom[0], right_bottom[0], apex[0], left_bottom[0]]
 y = [left_bottom[1], right_bottom[1], apex[1], left_bottom[1]]
 plt.plot(x, y, 'b--', lw=4)
 plt.imshow(color_select)
-plt.imshow(line_image)
+#plt.imshow(line_image)
 plt.show()

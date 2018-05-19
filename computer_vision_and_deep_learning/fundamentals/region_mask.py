@@ -13,9 +13,9 @@ xsize = image.shape[1]
 region_select = np.copy(image)
 
 # Define a triangle region of interest 
-left_bottom = [0, 539]
-right_bottom = [900, 300]
-apex = [400, 0]
+left_bottom = [0, 540]
+right_bottom = [960, 540]
+apex = [440, 0]
 
 # Fit lines (y=Ax+B) to identify the  3 sided region of interest
 # np.polyfit() returns the coefficients [A, B] of the fit
@@ -25,7 +25,6 @@ fit_bottom = np.polyfit((left_bottom[0], right_bottom[0]), (left_bottom[1], righ
 
 # Find the region inside the lines
 XX, YY = np.meshgrid(np.arange(0, xsize), np.arange(0, ysize))
-
 region_thresholds = (YY > (XX * fit_left[0] + fit_left[1])) & \
                     (YY > (XX * fit_right[0] + fit_right[1])) & \
                     (YY < (XX * fit_bottom[0] + fit_bottom[1]))
